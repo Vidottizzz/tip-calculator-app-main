@@ -1,30 +1,111 @@
 :root {
-    /* ### Primary */
+  /* ### Primary */
 
---Strongcyan: hsl(172, 67%, 45%);
+  --Strongcyan: hsl(172, 67%, 45%);
 
-/* ### Neutral */
+  /* ### Neutral */
 
---Verydarkcyan: hsl(183, 100%, 15%);
---Darkgrayishcyan: hsl(186, 14%, 43%);
---Grayishcyan: hsl(184, 14%, 56%);
---Lightgrayishcyan: hsl(185, 41%, 84%);
---Verylightgrayishcyan: hsl(189, 41%, 97%);
---White: hsl(0, 0%, 100%);
+  --Verydarkcyan: hsl(183, 100%, 15%);
+  --Darkgrayishcyan: hsl(186, 14%, 43%);
+  --Grayishcyan: hsl(184, 14%, 56%);
+  --Lightgrayishcyan: hsl(185, 41%, 84%);
+  --Verylightgrayishcyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
 }
 * {
-    font-family: 'Space Mono', monospace;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Space Mono", monospace;
+}
+.flex {
+    display: flex;
 }
 form input {
-    font-size : 24px;
+  font-size: 24px;
 }
-.attribution { font-size: 11px; text-align: center; }
-
-.attribution a { color: hsl(228, 45%, 44%); }
-
-#card-itself {
-    margin: 5rem auto;
-    width: 25rem;
-    background-color: red; 
+header {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 1.6rem 0;
+  letter-spacing: 0.35rem;
+}
+header h1 {
+    font-size: 1.6rem;
+}
+header p {
+  font-size: 1.6rem;
+}
+main {
+    padding: 1.8rem;
+}
+input {
+    width: 18.6rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    margin-bottom: 1.4rem;
     
 }
+#card-itself {
+  margin: 5rem auto;
+  width: 23rem;
+  background-color: red;
+}
+input[type="radio"] {
+    appearance: none;
+    background-color:var(--Verydarkcyan);
+    margin: 0;
+    font: inherit;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+}
+label {
+    
+    
+}
+form p:nth-of-type(1) {
+    margin-bottom:0.8rem;
+}
+.hold-tip {
+    margin-bottom: 0.6rem;
+} 
+.hold-input {
+    position: relative;
+    margin-right: 1.2rem;
+    
+}
+.hold-input p {
+    color: white;
+    position: absolute;
+    top: 0.45rem;
+    left: 3.5rem;
+    font-size: 1.4rem;
+}
+#hold-people {
+    float: lef;
+}
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+#hold-people #ppl {
+left: 1rem;
+}
+.hold-total {
+  margin-bottom: 1rem;
+}
+
+
+
+

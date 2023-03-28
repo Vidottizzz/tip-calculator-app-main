@@ -14,7 +14,8 @@
 <body>
   <div id="card-itself">
     <header>
-      <h1>SPLITTER</h1>
+      <h1>SPLI</h1>
+      <p>TTER</p>
     </header>
     
     <main>
@@ -23,29 +24,67 @@
         <input type="number" placeholder="$" id="numInput" name="numInput"><br>
       
         <p>Select Tip %</p>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">5%</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">10%</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">15%</label>
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">25%</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">50%</label><br>
-        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-        <label for="javascript">Custom</label>
-      
-        <label for="lname">Number of people</label><br>
-        <input type="number" id="lname" name="lname" value="5">
+        <div class="hold-tip flex">
+          <div class="hold-input">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html"></label>
+            <p>5%</p>
+          </div>
+          <div class="hold-input">
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css"></label>
+            <p>10%</p>
+          </div>
+        </div>
+
+        <div class="hold-tip flex">
+          <div class="hold-input">
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript"></label>
+            <p>15%</p>
+          </div>
+          <div class="hold-input">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html"></label>
+            <p>25%</p>
+          </div>
+        </div>
+        <div class="hold-tip flex">
+          <div class="hold-input">
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css"></label>
+            <p>50%</p>
+          </div>
+          <div class="hold-input">
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript"></label>
+            <p>Custom</p>
+          </div>
+        </div>
+    
+      <div id="hold-people">
+        <label for="ppl">Number of people</label><br>
+        <input type="number" id="ppl" name="lname" value="5">
+      </div>
       </form>
     
       <div>
-        <p>Tip Amount</p> <span>$4.27</span>
+        <div class="hold-total">
+          <div class="flex">
+
+            <p>Tip Amount</p> <span>$4.27</span>
+
+          </div>
+          <p>/ person</p>
+        </div>
+      <div class="hold-total">
+        <div class="flex">
+
+          <p>Total</p> <span>$32.79</span>
+
+        </div>
         <p>/ person</p>
-      
-        <p>Total</p> <span>$32.79</span>
-        <p>/ person</p>
+      </div>
         <button>RESET</button>
       
         
