@@ -20,10 +20,11 @@
     
     <main>
       <form>
-        <label for="numInput">Bill</label><br>
-        <input type="number" placeholder="$" id="numInput" name="numInput"><br>
+        <label class="title-color" for="numInput">Bill</label>
+        <img id="img-input1" src="images/icon-dollar.svg" alt="">
+        <input type="number" placeholder="$" id="numInput" name="numInput" value="142.55">
       
-        <p>Select Tip %</p>
+        <p class="title-color">Select Tip %</p>
         <div class="hold-tip flex">
           <div class="hold-input">
             <input type="radio" id="html" name="fav_language" value="HTML">
@@ -58,21 +59,22 @@
           <div class="hold-input">
             <input type="radio" id="javascript" name="fav_language" value="JavaScript">
             <label for="javascript"></label>
-            <p>Custom</p>
+            <p id="custom-move">Custom</p>
           </div>
         </div>
     
       <div id="hold-people">
-        <label for="ppl">Number of people</label><br>
-        <input type="number" id="ppl" name="lname" value="5">
+        <img id="img-input2" src="images/icon-person.svg" alt="">
+        <label for="ppl" class="title-color">Number of people</label><br>
+        <input type="number" id="ppl" name="lname" value="5" step="1">
       </div>
       </form>
     
-      <div>
+      <div id="hold-totals">
         <div class="hold-total">
           <div class="flex">
 
-            <p>Tip Amount</p> <span>$4.27</span>
+            <h2>Tip Amount</h2> <span>$4.27</span>
 
           </div>
           <p>/ person</p>
@@ -80,7 +82,7 @@
       <div class="hold-total">
         <div class="flex">
 
-          <p>Total</p> <span>$32.79</span>
+          <h2>Total</h2> <span>$32.79</span>
 
         </div>
         <p>/ person</p>
