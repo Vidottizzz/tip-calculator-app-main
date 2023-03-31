@@ -37,21 +37,24 @@ sendButton.addEventListener("click", function (e) {
       if (radio[i].checked) {
         //calculo para saber a porcentagem baseada no valor do radio selecionado
         totalTipValue = numValue * radio[i].value;
+        
         // mostrando resultado da da porcentagem do valor
         console.log(totalTipValue);
         //calculo para dividir por pessoa
         let tipEachPer = totalTipValue / pplValue;
         // mostrando resultado da divisão
         console.log(tipEachPer);
-        tipSpan.innerHTML = `${tipEachPer} $`;
-        totalSpan.innerHTML = `${totalTipValue} $`;
+        tipSpan.innerHTML = `$${tipEachPer.toFixed(2)}`;
+        totalSpan.innerHTML = `$${totalTipValue.toFixed(2)}`;
       }
-// falta colocar os 2 resultados encontrados a cima e colocar nas divs do quadrado verde
+
+      // falta colocar os 2 resultados encontrados a cima e colocar nas divs do quadrado verde
     }
   }
-
   getRadioValue();
+
 });
+
 
 // valor do input checked
 // function getChecked() {
