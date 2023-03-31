@@ -19,21 +19,21 @@
     </header>
     
     <main>
-      <form>
+      <form action="">
         <label class="title-color" id="bill" for="numInput">Bill</label>
         <img id="img-input1" src="images/icon-dollar.svg" alt="">
-        <input id="number-input" type="number" placeholder="" id="numInput" name="numInput">
+        <input  id="number-input" type="number" placeholder="" id="numInput" name="numInput">
       
         <p class="title-color">Select Tip %</p>
         <div class="hold-tip flex">
           <div class="hold-input">
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">5%</label>
+            <input type="radio" id="five" name="fav_language" value="0.05">
+            <label for="five">5%</label>
             
           </div>
           <div class="hold-input">
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="css">10%</label>
+            <input  type="radio" id="ten" name="fav_language" value="0.10">
+            <label for="ten">10%</label>
           
           </div>
         </div>
@@ -41,24 +41,24 @@
           
           <div class="hold-tip flex">
             <div class="hold-input">
-              <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-              <label for="javascript">15%</label>
+              <input  type="radio" id="fifteen" name="fav_language" value="0.15">
+              <label for="fifteen">15%</label>
         
             </div>
             <div class="hold-input">
-              <input type="radio" id="html" name="fav_language" value="HTML">
-              <label for="html">25%</label>
-        
+              <input  type="radio" id="twenty" name="fav_language" value="0.20">
+              <label for="twenty">20%</label>
+             
             </div>
           </div>
           <div class="hold-tip flex">
             <div class="hold-input">
-              <input type="radio" id="css" name="fav_language" value="CSS">
-              <label for="css">50%</label>
+              <input  type="radio" id="fifty" name="fav_language" value="0.50">
+              <label for="fifty">50%</label>
             </div>
             <div class="hold-input">
-              <input id="dif-input" type="number" id="javascript" name="fav_language" placeholder="Custom">
-              <label for="javascript"></label>
+              <input  id="dif-input" type="number" name="fav_language" placeholder="Custom">
+              <label for="custom"></label>
             </div>
           </div>
 </div>
@@ -68,13 +68,15 @@
         <label for="ppl" id="number-people" class="title-color">Number of people</label><br>
         <input type="number" id="ppl" name="lname"  step="1">
       </div>
+
+      <input id="send" type="submit" value="calcular">
       </form>
     
       <div id="hold-totals">
         <div class="hold-total">
           <div class="flex">
 
-            <h2>Tip Amount</h2> <span>$0.00</span>
+            <h2>Tip Amount</h2> <span id="tip">$0.00</span>
 
           </div>
           <p>/ person</p>
@@ -82,12 +84,12 @@
       <div class="hold-total">
         <div class="flex">
 
-          <h2>Total</h2> <span>$0.00</span>
+          <h2>Total</h2> <span id="total">$0.00</span>
 
         </div>
         <p>/ person</p>
       </div>
-        <button>RESET</button>
+        <button id="resetButton">RESET</button>
       
         
       </div>
