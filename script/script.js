@@ -55,7 +55,32 @@ sendButton.addEventListener("click", function (e) {
 
 });
 
+//estrutura para validação - mudar variaveis
+function validate() {
+  let name = document.forms["Form"]["numInput"].value;
+  let name1 = document.forms["Form"]["numberppl"].value;
+  let errMsg = document.querySelector(".err-msg");
+  let errMsg1 = document.querySelector(".err-msg1");
+  
 
+
+// se nome for vazio adiciona a classe vermelha para a borda do elemento  e remove o atributo hide da mensagem de erro
+  if (name == "") {
+      errMsg.classList.remove("hide");
+      document.forms["Form"]["numInput"].classList.add("border-red");
+    } else {
+      errMsg.classList.add("hide");
+      document.forms["Form"]["numInput"].classList.remove("border-red");
+    }
+    if (name1 == "") {
+        errMsg1.classList.remove("hide");
+        document.forms["Form"]["numberppl"].classList.add("border-red");
+      } else {
+        errMsg1.classList.add("hide");
+        document.forms["Form"]["numberppl"].classList.remove("border-red");
+      }
+    }
+  
 // valor do input checked
 // function getChecked() {
 //     const checkBox = document.getElementById('check1').checked;

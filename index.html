@@ -19,10 +19,11 @@
     </header>
     
     <main>
-      <form action="">
+      <form name="Form" id="FORM" action="">
         <label class="title-color" id="bill" for="numInput">Bill</label>
         <img id="img-input1" src="images/icon-dollar.svg" alt="">
         <input  id="number-input" type="number" placeholder="" id="numInput" name="numInput">
+        <div class="err-msg hide"><p>cant't be zero</p></div>
       
         <p class="title-color">Select Tip %</p>
         <div class="hold-tip flex">
@@ -65,11 +66,13 @@
     
       <div id="hold-people">
         <img id="img-input2" src="images/icon-person.svg" alt="">
-        <label for="ppl" id="number-people" class="title-color">Number of people</label><br>
-        <input type="number" id="ppl" name="lname"  step="1">
+        <label for="nunberppl" id="number-people" class="title-color">Number of people</label><br>
+        <input type="number" id="ppl" name="numberppl"  step="1">
+        <div class="err-msg1 hide"><p>cant't be zero</p></div>
+
       </div>
 
-      <input id="send" type="submit" value="CALCULATE">
+      <input onclick="validate()" id="send" type="submit" value="CALCULATE">
       </form>
     
       <div id="hold-totals">
