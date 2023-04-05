@@ -76,6 +76,7 @@ input {
 
 input:hover {
    cursor: pointer;
+   border: 2px solid green;
 }
 input[type=radio]:checked {
 
@@ -85,14 +86,19 @@ input[type=radio]:checked {
   color: var(--Verydarkcyan); 
   
 }
-.err-msg {
-  color:red
-}
+
 .err-msg1 {
-  color:red
+  color:red;
+  
+  
+}
+.p-err {
+  margin-bottom: 0;
 }
 .border-red {
   border: 1px solid red;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
 }
 .hide {
   display: none;
@@ -107,6 +113,7 @@ label {
 label:hover {
   cursor: pointer;
 }
+
 #img-input1 {
   position: absolute;
   left: 1.4rem;
@@ -117,11 +124,13 @@ label:hover {
  
   left: 1.4rem;
   top: 21.7rem;
+  z-index: 1;
 }
 #card-itself {
   margin: 5rem auto;
   width: 23rem;
   background-color: var(--Lightgrayishcyan);
+ 
 
 }
 input[type="radio"] {
@@ -192,6 +201,7 @@ form #bill {
   background-color: var(--Verydarkcyan);
   position: relative;
   border-radius: 1rem;
+  margin-top:1rem;
 }
 #hold-totals span {
   left: 10.2rem;
@@ -202,7 +212,7 @@ form #bill {
 
 #send {
   position: absolute;
-  bottom: -19rem;
+  bottom: -19.5rem;
   z-index: 1;
   background-color: var(--Strongcyan);
   margin-top: 1rem;
@@ -227,9 +237,7 @@ form #bill {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-#hold-people #ppl {
-left: 1rem;
-}
+
 .hold-total {
   margin-bottom: 1rem;
 }
@@ -268,6 +276,11 @@ button:hover {
   top: 19rem;
   font-size: 1rem;
   left: 0.3rem;
+
+}
+#number-input:focus {
+  outline: 0;
+  border: 2px solid green;
 }
 
 
@@ -305,9 +318,6 @@ span {
 }input{
 width: 29rem;
 }
-input[type="number"] {
- 
-}
 #card-itself {
     margin: 5rem auto;
     width: 64rem;
@@ -325,7 +335,12 @@ input[type="number"] {
     left: 1.4rem;
     top: 18.9rem;
   }
-
+  .err-msg1 {
+    color:red;
+    position: absolute;
+    right: 2.3rem;
+    bottom: 4.5rem;
+  }
   #custom-move{
   position: absolute;
   left: 2rem;
@@ -422,7 +437,16 @@ input[type="number"] {
     color: hsl(228, 45%, 44%);
   }
   #hold-people #ppl {
-  left: 1rem;
+    position: relative;
+
+  
+}
+input#ppl {
+    margin-bottom: 0;
+
+  }
+  #hold-people {
+ 
   }
   .hold-total {
     margin-bottom: 1rem;

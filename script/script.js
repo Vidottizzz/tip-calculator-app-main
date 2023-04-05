@@ -13,8 +13,26 @@ let sendButton = document.querySelector("#send");
 
 let resetButton = document.querySelector("#resetButton");
 
+//BOTÃO DE RESET 
+resetButton.addEventListener("click", function (e) {
+
+  var element = document.getElementById("FORM");
+  e.preventDefault();
+   element.reset();
+   tipSpan.innerHTML = "$0.00";
+  totalSpan.innerHTML = "$0.00";
+});
+
+
+
+
+
+
+
+
 // ao clicar no botão calcular, pegar os valores dos inputs e realizar os
 // calculos
+
 sendButton.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -37,56 +55,86 @@ sendButton.addEventListener("click", function (e) {
       if (radio[i].checked) {
         //calculo para saber a porcentagem baseada no valor do radio selecionado
         totalTipValue = numValue * radio[i].value;
-        
-        // mostrando resultado da da porcentagem do valor
-        console.log(totalTipValue);
-        //calculo para dividir por pessoa
-        let tipEachPer = totalTipValue / pplValue;
-        // mostrando resultado da divisão
-        console.log(tipEachPer);
+      
+      
+      // mostrando resultado da da porcentagem do valor
+      console.log(totalTipValue);
+      //calculo para dividir por pessoa
+      let tipEachPer = totalTipValue / pplValue;
+      let name1 = document.forms["Form"]["numberppl"].value;
+
+      // mostrando resultado da divisão
+      console.log(tipEachPer);
+      // tipSpan.innerHTML = `$${tipEachPer.toFixed(2)}`;
+      // totalSpan.innerHTML = `$${totalTipValue.toFixed(2)}`;
+      if (name1 == ""){
+        tipSpan.innerHTML = "Error";
+        totalSpan.innerHTML = "Error";
+      }else {
         tipSpan.innerHTML = `$${tipEachPer.toFixed(2)}`;
         totalSpan.innerHTML = `$${totalTipValue.toFixed(2)}`;
       }
 
+      }
       // falta colocar os 2 resultados encontrados a cima e colocar nas divs do quadrado verde
     }
   }
-  getRadioValue();
+  function calculateCustom() {
+    if(customValue != "") {
+     let  CustomTotalTipValue = numValue * (customValue / 100);
+     let CustomtipEachPer = CustomTotalTipValue / pplValue
 
+      tipSpan.innerHTML = `$${CustomtipEachPer.toFixed(2)}`;
+      totalSpan.innerHTML = `$${CustomTotalTipValue.toFixed(2)}`
+    }
+
+
+  }
+calculateCustom()
+  getRadioValue();
 });
+
 
 //estrutura para validação - mudar variaveis
 function validate() {
   let name = document.forms["Form"]["numInput"].value;
   let name1 = document.forms["Form"]["numberppl"].value;
-  let errMsg = document.querySelector(".err-msg");
   let errMsg1 = document.querySelector(".err-msg1");
-  
+
+  let tipSpan = document.querySelector("#tip");
+let totalSpan = document.querySelector("#total");
 
 
-// se nome for vazio adiciona a classe vermelha para a borda do elemento  e remove o atributo hide da mensagem de erro
-  if (name == "") {
-      errMsg.classList.remove("hide");
-      document.forms["Form"]["numInput"].classList.add("border-red");
-    } else {
-      errMsg.classList.add("hide");
-      document.forms["Form"]["numInput"].classList.remove("border-red");
-    }
-    if (name1 == "") {
-        errMsg1.classList.remove("hide");
-        document.forms["Form"]["numberppl"].classList.add("border-red");
-      } else {
-        errMsg1.classList.add("hide");
-        document.forms["Form"]["numberppl"].classList.remove("border-red");
-      }
-    }
+  // se nome for vazio adiciona a classe vermelha para a borda do elemento  e remove o atributo hide da mensagem de erro
+  if (name1 == "") {
+    errMsg1.classList.remove("hide");
+    document.forms["Form"]["numberppl"].classList.add("border-red");
+    totalSpan.innerHTML = "err";
+
+  } else {
+    errMsg1.classList.add("hide");
+    document.forms["Form"]["numberppl"].classList.remove("border-red");
+    
+  }
+ 
+
+
   
-// valor do input checked
-// function getChecked() {
-//     const checkBox = document.getElementById('check1').checked;
-//     if (checkBox === true) {
-//       console.log(true);
-//       } else {
-//         console.log(false);
-//     }
-//   }
+  // if (customValue != null) {
+  //   var ele = document.getElementsByName("fav_language");
+  //   for (var i = 0; i < ele.length; i++) ele[i].checked = false;
+  //   // conta
+  // }
+  // let ppl = document.querySelector("#ppl");
+  // const pplValue = ppl.value;
+
+  // const customInput = document.querySelector("#dif-input");
+  // const customValue = customInput.value;
+  // console.log(customValue);
+
+  // let totalTipValueCustom = numValue * (customValue / 100);
+  // let tipeachperCustom = totalTipValueCustom / pplValue;
+
+  // tipSpan.innerHTML = `$${tipeachperCustom.toFixed(2)}`;
+  // totalSpan.innerHTML = `$${totalTipValueCustom.toFixed(2)}`;
+}
